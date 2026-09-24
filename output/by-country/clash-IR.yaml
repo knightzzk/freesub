@@ -4,14 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇹 AT 01 - xiaohe
+- name: 🇮🇷 IR 01 - xiaohe
   type: ss
-  server: 82.110.60.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  server: p1tun3.greewebservices.ir
+  port: 2070
+  cipher: chacha20-ietf-poly1305
+  password: cVvgP0Bz69hsErPBvqKbwQ
   udp: true
-- name: 🇦🇹 AT 02 - xiaohe
+- name: 🇮🇷 IR 02 - xiaohe
   type: vless
   server: g2.haxat.bestvbest.ir
   port: 20610
@@ -23,19 +23,28 @@ proxies:
     public-key: lcXIrYi2o8yXrYHR321qQ--5lqVT8a6TKbaGpYTq4CI
   servername: cdn-apple.com
   client-fingerprint: chrome
+- name: 🇮🇷 IR 03 - xiaohe
+  type: ss
+  server: p1tun2.greewebservices.ir
+  port: 2060
+  cipher: chacha20-ietf-poly1305
+  password: cVvgP0Bz69hsErPBvqKbwQ
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇹 AT 01 - xiaohe
-  - 🇦🇹 AT 02 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
+  - 🇮🇷 IR 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹 AT 01 - xiaohe
-  - 🇦🇹 AT 02 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
+  - 🇮🇷 IR 03 - xiaohe
 rules:
 - MATCH,PROXIES
