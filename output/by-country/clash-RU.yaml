@@ -6,19 +6,33 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 45.130.125.207
-  port: 8443
-  uuid: 31aa0950-eb19-45ff-94a2-af416deb3b90
+  server: 172.67.167.77
+  port: 443
+  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: SquarE-saLaD-EbDe.ZDFGVcCfgUUYgGG.wOrKeRS.DEV
+  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiZm5INktPV0lGcHI1NjNSOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /vl/6871nrbnl9WsdAiOUInt
     headers:
-      Host: square-salad-ebde.zdfgvccfguuyggg.workers.dev
+      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  type: vless
+  server: 104.21.31.137
+  port: 443
+  uuid: 59c70620-d2f3-4255-9d6f-f4c5103d64ce
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 59fssIBE-SDDrRs3qW83QQZz0H1NT-o.q7qwsxItB6BYi5nMTa4naAlz.woRkErs.deV
+  network: ws
+  ws-opts:
+    path: /vl/FpYFoMlg8sRpgV7SSaOaRYa3fagqGu?ed
+    headers:
+      Host: 59fssibe-sddrrs3qw83qqzz0h1nt-o.q7qwsxitb6byi5nmta4naalz.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   type: ss
   server: 130.49.189.158
   port: 43558
@@ -32,6 +46,7 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -39,5 +54,6 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 rules:
 - MATCH,PROXIES
